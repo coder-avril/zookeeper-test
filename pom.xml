@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lding</groupId>
+    <artifactId>zookeeper-test</artifactId>
+    <version>1.0.0</version>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>zk-client</module>
+        <module>order-server</module>
+        <module>kill-server-1</module>
+        <module>kill-server-2</module>
+        <module>kill-server-3</module>
+        <module>distribute-lock-ids</module>
+        <module>distribute-lock-order1</module>
+        <module>distribute-lock-order2</module>
+        <module>distribute-lock-order3</module>
+        <module>distribute-lock-perfict</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <!-- 开发阶段工具 -->
+        <!-- lombok 在编译期间帮助生成Getter、Setter等代码 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <!-- 仅仅在编译期间使用即可，scope可以设置为provided -->
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.7.1</version>
+        </dependency>
+    </dependencies>
+
+</project>
