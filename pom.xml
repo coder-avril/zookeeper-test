@@ -22,7 +22,6 @@
         <module>distribute-lock-ids</module>
         <module>distribute-lock-order1</module>
         <module>distribute-lock-order2</module>
-        <module>distribute-lock-order3</module>
         <module>distribute-lock-perfict</module>
     </modules>
     <packaging>pom</packaging>
